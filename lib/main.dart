@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:movie_ticket_booking_flutter_nlu/screen/home/home_screen.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:movie_ticket_booking_flutter_nlu/config/routes.dart';
+import 'package:movie_ticket_booking_flutter_nlu/screen/register/register_screen.dart';
 
 import 'config/theme.dart';
+
 void main() {
-  runApp(const MyApp());
+  initializeDateFormatting().then(
+    (_) => runApp(const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,15 +18,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      darkTheme: darkThemeData(context),
-      theme: themeData(context),
-      title: 'Flutter Demo',
-      home: HomeScreen(),
+      themeMode: ThemeMode.system,
+      darkTheme: darkThemeData(),
+      theme: themeData(),
+      title: 'Movie Ticket Booking',
+      routes: routes,
+      initialRoute: RegisterScreen.routeName,
     );
   }
 }
-
-
-
