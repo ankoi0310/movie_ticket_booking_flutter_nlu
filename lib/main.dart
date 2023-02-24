@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
-      darkTheme: darkThemeData(),
       theme: themeData(),
+      darkTheme: darkThemeData(),
       title: 'Movie Ticket Booking',
       routes: routes,
       initialRoute: RegisterScreen.routeName,
