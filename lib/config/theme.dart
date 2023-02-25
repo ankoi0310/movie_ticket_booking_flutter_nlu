@@ -9,13 +9,24 @@ ThemeData themeData() {
     appBarTheme: appBarTheme,
     primaryColor: kPrimaryColor,
     brightness: Brightness.light,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
     scaffoldBackgroundColor: kBackgroundLightColor,
     highlightColor: kBackgroundLightColor,
     focusColor: kBackgroundLightColor,
     colorScheme: const ColorScheme.light(
+      primary: kPrimaryColor,
       secondary: kSecondaryLightColor,
       background: kBackgroundLightColor,
       surface: kBackgroundLightColor,
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: kTextLightColor,
+        textStyle: const TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
     ),
     iconTheme: const IconThemeData(color: kPrimaryIconColor),
     textSelectionTheme: const TextSelectionThemeData(
@@ -55,12 +66,23 @@ ThemeData darkThemeData() {
     appBarTheme: appBarDarkTheme,
     primaryColor: kPrimaryColor,
     brightness: Brightness.dark,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
     scaffoldBackgroundColor: kBackgroundDarkColor,
     highlightColor: kBackgroundDarkColor,
     colorScheme: const ColorScheme.dark(
+      primary: kPrimaryColor,
       background: kBackgroundDarkColor,
       secondary: kSecondaryDarkColor,
       surface: kSurfaceDarkColor,
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: kTextDarkColor,
+        textStyle: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
+        ),
+      ),
     ),
     iconTheme: const IconThemeData(color: kPrimaryIconColor),
     textSelectionTheme: const TextSelectionThemeData(
