@@ -5,19 +5,22 @@ import 'constants.dart';
 // Our light/Primary Theme
 ThemeData themeData() {
   return ThemeData.light().copyWith(
+    useMaterial3: true,
     appBarTheme: appBarTheme,
     primaryColor: kPrimaryColor,
     brightness: Brightness.light,
     scaffoldBackgroundColor: kBackgroundLightColor,
+    highlightColor: kBackgroundLightColor,
+    focusColor: kBackgroundLightColor,
     colorScheme: const ColorScheme.light(
       secondary: kSecondaryLightColor,
       background: kBackgroundLightColor,
       surface: kBackgroundLightColor,
     ),
     iconTheme: const IconThemeData(color: kPrimaryIconColor),
-    useMaterial3: true,
     textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: Colors.black,
+      cursorColor: kTextLightColor,
+      selectionColor: Colors.blueAccent,
     ),
     inputDecorationTheme: const InputDecorationTheme(
       border: OutlineInputBorder(
@@ -41,13 +44,6 @@ ThemeData themeData() {
         ),
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
-      focusedErrorBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.red,
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
     ),
   );
 }
@@ -55,19 +51,21 @@ ThemeData themeData() {
 // Dark Them
 ThemeData darkThemeData() {
   return ThemeData.dark().copyWith(
+    useMaterial3: true,
     appBarTheme: appBarDarkTheme,
     primaryColor: kPrimaryColor,
     brightness: Brightness.dark,
     scaffoldBackgroundColor: kBackgroundDarkColor,
+    highlightColor: kBackgroundDarkColor,
     colorScheme: const ColorScheme.dark(
       background: kBackgroundDarkColor,
       secondary: kSecondaryDarkColor,
       surface: kSurfaceDarkColor,
     ),
     iconTheme: const IconThemeData(color: kPrimaryIconColor),
-    useMaterial3: true,
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: kTextDarkColor,
+      selectionColor: Colors.blueAccent,
     ),
     inputDecorationTheme: const InputDecorationTheme(
       filled: true,
@@ -91,36 +89,33 @@ ThemeData darkThemeData() {
           color: Colors.red,
           width: 2,
         ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      focusedErrorBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.red,
-          width: 2,
-        ),
+        gapPadding: 0,
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
     ),
   );
 }
 
-AppBarTheme appBarTheme = AppBarTheme(
+AppBarTheme appBarTheme = const AppBarTheme(
   color: kBackgroundLightColor,
-  iconTheme: const IconThemeData(color: kTextLightColor),
-  titleTextStyle: const TextStyle(
+  elevation: 1,
+  centerTitle: true,
+  iconTheme: IconThemeData(color: kTextLightColor),
+  titleTextStyle: TextStyle(
     color: kTextLightColor,
     fontSize: 22,
   ),
-  shadowColor: kShadowColor.withOpacity(0.7),
+  shadowColor: kShadowColor,
 );
 
 AppBarTheme appBarDarkTheme = const AppBarTheme(
   color: kBackgroundDarkColor,
-  // elevation: 0,
+  elevation: 1,
+  centerTitle: true,
   iconTheme: IconThemeData(color: kTextDarkColor),
   titleTextStyle: TextStyle(
     color: kTextDarkColor,
     fontSize: 22,
   ),
-  shadowColor: Colors.white30,
+  shadowColor: Colors.white,
 );

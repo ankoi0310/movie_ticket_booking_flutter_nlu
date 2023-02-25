@@ -18,3 +18,15 @@ const kTextDarkColor = Colors.white;
 const emptySeatColor = Color(0xff323d4c);
 
 const kShadowColor = Color(0xff000000);
+
+// Form Error
+final RegExp emailValidatorRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+const String kNameNullError = "Vui lòng nhập tên";
+const String kEmailNullError = "Vui lòng nhập email";
+const String kInvalidEmailError = "Email không hợp lệ";
+const String kPhoneNullError = "Vui lòng nhập số điện thoại";
+const String kBirthdayNullError = "Vui lòng chọn ngày sinh";
+const String kPassNullError = "Vui lòng nhập mật khẩu";
+const String kShortPassError = "Mật khẩu phải có ít nhất 8 ký tự";
+const String kRePassNullError = "Vui lòng nhập lại mật khẩu";
+const String kMatchPassError = "Mật khẩu không khớp";
