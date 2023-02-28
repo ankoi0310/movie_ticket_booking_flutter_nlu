@@ -33,27 +33,12 @@ ThemeData themeData() {
       cursorColor: kTextLightColor,
       selectionColor: Colors.blueAccent,
     ),
-    inputDecorationTheme: const InputDecorationTheme(
-      border: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: kBackgroundLightColor,
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(
+        color: kTextLightColor,
       ),
-      focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.black,
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      errorBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.red,
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+      bodyMedium: TextStyle(
+        color: kTextLightColor,
       ),
     ),
   );
@@ -89,30 +74,12 @@ ThemeData darkThemeData() {
       cursorColor: kTextDarkColor,
       selectionColor: Colors.blueAccent,
     ),
-    inputDecorationTheme: const InputDecorationTheme(
-      filled: true,
-      fillColor: kSecondaryDarkColor,
-      border: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: kSecondaryDarkColor,
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(
+        color: kTextDarkColor,
       ),
-      focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: kTextDarkColor,
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      errorBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.red,
-          width: 2,
-        ),
-        gapPadding: 0,
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+      bodyMedium: TextStyle(
+        color: kTextDarkColor,
       ),
     ),
   );

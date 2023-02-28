@@ -30,3 +30,6 @@ const String kPassNullError = "Vui lòng nhập mật khẩu";
 const String kShortPassError = "Mật khẩu phải có ít nhất 8 ký tự";
 const String kRePassNullError = "Vui lòng nhập lại mật khẩu";
 const String kMatchPassError = "Mật khẩu không khớp";
+
+// Default
+const String defaultImageUrl = "https://robohash.org/";
